@@ -40,7 +40,9 @@ function addSelectedItemToCart() {
 }
 
 // TODO: Save the contents of the cart to Local Storage
-function saveCartToLocalStorage() {}
+function saveCartToLocalStorage() {
+  localStorage.setItem('cart', JSON.stringify(Cart.allItems));
+}
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {}

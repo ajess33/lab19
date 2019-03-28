@@ -48,11 +48,11 @@ function saveCartToLocalStorage() {
 function updateCounter() {
   var quantityElement = document.getElementById('quantity');
   var itemCount = document.getElementById('itemCount');
-  if(itemCount.textContent !== ''){
-  itemCount.textContent = parseInt(itemCount.textContent) + parseInt(quantityElement.value);
-  console.log(quantityElement.value);
-  }
-  else {
+  if (itemCount.textContent !== '') {
+    itemCount.textContent =
+      parseInt(itemCount.textContent) + parseInt(quantityElement.value);
+    console.log(quantityElement.value);
+  } else {
     itemCount.textContent = parseInt(quantityElement.value);
   }
 }
@@ -61,8 +61,15 @@ function updateCounter() {
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
   // TODO: Add a new element to the cartContents div with that information
+  var selectElement = document.getElementById('items');
+  var quantityElement = document.getElementById('quantity');
+  var cartPreview = document.getElementById('cartContents');
+  var cartItem = document.createElement('p');
+  cartItem.textContent = `${selectElement.value} added to cart! ${
+    quantityElement.value
+  } item(s)`;
+  cartPreview.appendChild(cartItem);
 }
-
 // Set up the "submit" event listener on the form.
 // This is the trigger for the app. When a user "submits" the form, it will
 // Call that handleSubmit method above and kick off the whole process

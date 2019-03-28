@@ -65,6 +65,7 @@ function updateCartPreview() {
   var quantityElement = document.getElementById('quantity');
   var cartPreview = document.getElementById('cartContents');
   var cartItem = document.createElement('p');
+  cartItem.classList.add('animate-added-cart');
   cartItem.textContent = `${selectElement.value} added to cart! ${
     quantityElement.value
   } item(s)`;

@@ -10,6 +10,35 @@ body{
 h1 {
   color:#138A36;
 }
+/* this animates text */
+
+.animate-added-cart {
+  margin-top: 2%;
+  /* color:pink; */
+  display: block;
+  width: 100px;
+  /* height:200px; */
+  /* position: relative; */
+  animation-name:boxFrame;
+  animation-duration: 6s;
+}
+
+@keyFrames boxFrame {
+  0% {
+    
+  }
+  30% {
+    tranform: rotate(-180deg);
+  }
+  70%,90% {
+    transform: rotate(360deg);
+    color: white;
+  }
+}
+
+
+
+
 main {
 margin: auto;
 border: thin 5px 100% black;

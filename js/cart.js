@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 'use strict';
 
 var Cart = [];
@@ -22,22 +24,17 @@ function clearCart() {}
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
-
   // TODO: Find the table body
-
   // TODO: Iterate over the items in the cart
   // TODO: Create a TR
   // TODO: Create a TD for the delete link, quantity,  and the item
   // TODO: Add the TR to the TBODY and each of the TD's to the TR
-
 }
 
 function removeItemFromCart(event) {
-
   // TODO: When a delete link is clicked, rebuild the Cart array without that item
   // TODO: Save the cart back to local storage
   // TODO: Re-draw the cart table
-
 }
 
 // This will initialize the page and draw the cart on screen

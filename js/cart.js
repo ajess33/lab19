@@ -21,8 +21,9 @@ function renderCart() {
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
-  var cartClear = document.getElementsByTagName('td');
+  var cartClear = document.getElementsByTagName('tr');
   // cartClear.remove();
+  // Cart = [];
 }
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
@@ -38,16 +39,20 @@ function showCart() {
       var itemData = document.createElement('td');
       var quantityData = document.createElement('td');
       var removeButton = document.createElement('td');
+      removeButton.setAttribute('id', Cart[i].item);
+      removeButton.addEventListener('click', removeItemFromCart);
       itemData.textContent = Cart[i].item;
       quantityData.textContent = Cart[i].quantity;
       removeButton.textContent = 'X';
       tableRow.appendChild(removeButton);
       tableRow.appendChild(quantityData);
       tableRow.appendChild(itemData);
+      tableBody.appendChild(tableRow);
     }
-    tableBody.appendChild(tableRow);
-  } else {
-    return;
+    var deleteTableButton = document.createElement('button');
+    deleteTableButton.textContent = 'Delete Cart';
+    var table = document.getElementById('cart');
+    table.appendChild(deleteTableButton);
   }
   // TODO: Create a TD for the delete link, quantity,  and the item
   // TODO: Add the TR to the TBODY and each of the TD's to the TR

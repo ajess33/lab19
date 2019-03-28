@@ -13,7 +13,6 @@ h1 {
 main {
 margin: auto;
 border: thin 5px 100% black;
-background: lightblue;
 width: 100%;
 }
 
@@ -23,8 +22,11 @@ ul-nav {
   text-align: center;
   margin-top: 9%;
   list-style-type: square;
-
 }
+.card  h1 {
+  text-align: center;
+}
+
 
 nav li {
   display: inline-block;
@@ -32,15 +34,20 @@ nav li {
  
 }
 
-.col-1 {
+.left{
   float: left;
   margin-top: 2%;
   max-width: 40%;
   margin-left: 5%;
-
 }
 
-.col-2 {
+car-ol {
+  margin-top: 2%;
+}
+.cart-nav {
+  margin-bottom: 1%;
+}
+.right {
   float: right;
   max-width: 40%;
   margin-top: 3%;
@@ -50,5 +57,5 @@ nav li {
 footer {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 43%;
 }
